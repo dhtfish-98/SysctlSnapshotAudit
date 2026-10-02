@@ -1,14 +1,20 @@
 {
-  "project": "SysctlSnapshotAudit",
+  "name": "SysctlSnapshotAudit",
+  "group": "host",
   "status": "PASS",
-  "test_count": 15,
-  "wheel": "sysctl_snapshot_audit-0.1.0-py3-none-any.whl",
-  "wheel_sha256": "90511f504349e4e7af187062cc4ee9af04b2a32670dd0f2e42b4e0835809d986",
-  "verification": "Local supported and malformed input tests, wheel build, separate install, imported package origin and CLI checks",
-  "reproduction": [
-    "python -m pip install .",
-    "python -m unittest discover -s tests -v",
-    "python -m pip wheel --no-deps --wheel-dir artifacts ."
-  ],
-  "limits": "Point-in-time engineering evidence only; CVP qualification and approval remain OPEN"
+  "version": "0.1.1",
+  "test_count": 18,
+  "source_code_sha256": "99db0051d4556f00126553f30026ccb92d8f77725d5859852ae4b9501e7d9378",
+  "wheel_sha256": "dcc59393d6344f004277b4bf912e6a57ef509bcc83a5f99df725c94e7beb1a49",
+  "source_wheel_installed_bytes": "PASS",
+  "licenses": "PASS",
+  "dependency_check": "PASS",
+  "verified_utc": "2026-10-02T11:19:56.985170+00:00",
+  "wheel": "sysctl_snapshot_audit-0.1.1-py3-none-any.whl",
+  "verification": "Fresh per-project environment; wheel/source/installed runtime byte comparison; complete installed unittest suite; pip dependency check; license byte checks",
+  "runtime_platform": "Python 3.14 macOS arm64; remote Linux CI recorded separately",
+  "application_qualification": "OPEN",
+  "whole_upstream_equivalence": "OPEN",
+  "effective_deployed_protection": "OPEN",
+  "record_kind": "Current repaired release verification"
 }

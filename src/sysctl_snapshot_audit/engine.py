@@ -2,7 +2,7 @@
 import fnmatch
 import posixpath
 import re
-from .common import InputError, Report, filemap, logical_lines, mapping
+from .common import InputError, Report, filemap, mapping
 
 POLICY = {'kernel.randomize_va_space':(2,), 'kernel.kptr_restrict':(2,), 'kernel.dmesg_restrict':(1,),
  'kernel.yama.ptrace_scope':(1,2,3), 'kernel.unprivileged_bpf_disabled':(1,2), 'kernel.perf_event_paranoid':(2,3,4),
@@ -37,11 +37,15 @@ def analyze(snapshot):
             report.add('file_scope','OPEN',path,'Outside documented sysctl.d search paths');continue
         if name not in chosen or PRIORITY.index(directory)<PRIORITY.index(posixpath.dirname(chosen[name])):chosen[name]=path
     for name,path in sorted(chosen.items()):
-        for line,raw in logical_lines(files[path]):
-            raw=raw.strip()
-            if not raw or raw.startswith(('#',';')):continue
+        # The frozen systemd conf_file_read callback consumes physical lines:
+        # it does not join backslash continuations or strip inline comments.
+        for line,raw in enumerate(files[path].split('\n'),1):
+            raw=raw.strip(' \t\r')
+            if not raw or raw.startswith('#'):continue
             where=path+':'+str(line)
-            match=re.fullmatch(r'(-?[^=\s]+)\s*=\s*([^#;]+?)\s*(?:[#;].*)?',raw)
+            if any(c.isspace() and c not in ' \t\r' for c in raw):
+                report.add('syntax','OPEN',where,'Whitespace outside the supported physical-line profile');continue
+            match=re.fullmatch(r'(-?[^=\s]+)[ \t]*=[ \t]*(.+?)[ \t]*',raw)
             if not match:
                 report.add('syntax','OPEN',where,'Unknown/exclusion/malformed sysctl directive');continue
             key,value=match.groups();key=key.lstrip('-')
