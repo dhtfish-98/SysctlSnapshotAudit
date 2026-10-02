@@ -1,5 +1,9 @@
 # SysctlSnapshotAudit
 
+Version **0.1.2**.
+
+New implementation author: **dhtfish98**. Copyright (c) 2026 dhtfish98 applies to the new implementation code. Upstream policy data, original notices and source references retain their original attribution.
+
 Persistent and observed sysctl snapshot drift audit. A complete independent new-scope defensive project; upstream-wide rewriting and equivalence are not claimed.
 
 Input: `{ "files": {"/etc/sysctl.d/99-policy.conf": "key=value"}, "observed": {"kernel.kptr_restrict": 2} }`. Complete new scope: 26 explicit non-routing workstation controls covering ASLR, pointer/log exposure, ptrace/BPF/perf, protected links/FIFOs/files/core dumps, IPv4/IPv6 forwarding/source routes/redirects/rp_filter and SYN cookies. Higher-priority directories mask same-named lower-priority files; selected filenames then apply lexically and repeated integer assignments use the last value. Policy values are project choices grounded in documented kernel meanings, not a claim of official universal guidance. Missing persistent or observed values are OPEN; non-integer observations are ERROR; runtime/persistent disagreements FAIL. Slash/glob/exclusion syntax is OPEN. Per-interface combined kernel semantics, sysctl.conf imports, network routing requirements, boot effects and unsupported kernels are outside the implemented scope.

@@ -1,3 +1,5 @@
+# Author: dhtfish98
+# Copyright (c) 2026 dhtfish98
 import unittest
 from sysctl_snapshot_audit import analyze
 from sysctl_snapshot_audit.engine import POLICY

@@ -1,3 +1,5 @@
+# Author: dhtfish98
+# Copyright (c) 2026 dhtfish98
 """Resolve explicit sysctl.d snapshots and compare declared workstation policy."""
 import fnmatch
 import posixpath

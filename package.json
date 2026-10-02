@@ -4,5 +4,6 @@
   "command": "sysctl-snapshot-audit",
   "license": "MIT",
   "description": "Persistent and observed sysctl snapshot drift audit",
-  "version": "0.1.1"
+  "version": "0.1.2",
+  "author": "dhtfish98"
 }
