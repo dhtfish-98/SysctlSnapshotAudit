@@ -1,0 +1,33 @@
+{
+  "files": {
+    "/etc/sysctl.d/99-policy.conf": "kernel.randomize_va_space=2\nkernel.kptr_restrict=2\nkernel.dmesg_restrict=1\nkernel.yama.ptrace_scope=1\nkernel.unprivileged_bpf_disabled=1\nkernel.perf_event_paranoid=2\nfs.protected_hardlinks=1\nfs.protected_symlinks=1\nfs.protected_fifos=2\nfs.protected_regular=2\nfs.suid_dumpable=0\nnet.ipv4.ip_forward=0\nnet.ipv4.tcp_syncookies=1\nnet.ipv4.conf.all.accept_redirects=0\nnet.ipv4.conf.default.accept_redirects=0\nnet.ipv4.conf.all.send_redirects=0\nnet.ipv4.conf.default.send_redirects=0\nnet.ipv4.conf.all.accept_source_route=0\nnet.ipv4.conf.default.accept_source_route=0\nnet.ipv4.conf.all.rp_filter=1\nnet.ipv4.conf.default.rp_filter=1\nnet.ipv6.conf.all.accept_redirects=0\nnet.ipv6.conf.default.accept_redirects=0\nnet.ipv6.conf.all.accept_source_route=-1\nnet.ipv6.conf.default.accept_source_route=-1\nnet.ipv6.conf.all.forwarding=0"
+  },
+  "observed": {
+    "kernel.randomize_va_space": 2,
+    "kernel.kptr_restrict": 2,
+    "kernel.dmesg_restrict": 1,
+    "kernel.yama.ptrace_scope": 1,
+    "kernel.unprivileged_bpf_disabled": 1,
+    "kernel.perf_event_paranoid": 2,
+    "fs.protected_hardlinks": 1,
+    "fs.protected_symlinks": 1,
+    "fs.protected_fifos": 2,
+    "fs.protected_regular": 2,
+    "fs.suid_dumpable": 0,
+    "net.ipv4.ip_forward": 0,
+    "net.ipv4.tcp_syncookies": 1,
+    "net.ipv4.conf.all.accept_redirects": 0,
+    "net.ipv4.conf.default.accept_redirects": 0,
+    "net.ipv4.conf.all.send_redirects": 0,
+    "net.ipv4.conf.default.send_redirects": 0,
+    "net.ipv4.conf.all.accept_source_route": 0,
+    "net.ipv4.conf.default.accept_source_route": 0,
+    "net.ipv4.conf.all.rp_filter": 1,
+    "net.ipv4.conf.default.rp_filter": 1,
+    "net.ipv6.conf.all.accept_redirects": 0,
+    "net.ipv6.conf.default.accept_redirects": 0,
+    "net.ipv6.conf.all.accept_source_route": -1,
+    "net.ipv6.conf.default.accept_source_route": -1,
+    "net.ipv6.conf.all.forwarding": 0
+  }
+}

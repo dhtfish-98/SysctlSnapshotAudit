@@ -1,0 +1,14 @@
+[build-system]
+requires = []
+build-backend = "backend"
+backend-path = ["."]
+
+[project]
+name = "sysctl-snapshot-audit"
+version = "0.1.0"
+requires-python = ">=3.10"
+description = "Persistent and observed sysctl snapshot drift audit"
+license = {text = "MIT"}
+
+[project.scripts]
+sysctl-snapshot-audit = "sysctl_snapshot_audit.cli:main"

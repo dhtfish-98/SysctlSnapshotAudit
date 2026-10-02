@@ -1,0 +1,7 @@
+{
+  "distribution": "sysctl-snapshot-audit",
+  "package": "sysctl_snapshot_audit",
+  "command": "sysctl-snapshot-audit",
+  "license": "MIT",
+  "description": "Persistent and observed sysctl snapshot drift audit"
+}

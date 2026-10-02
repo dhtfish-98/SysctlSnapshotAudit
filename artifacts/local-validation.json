@@ -1,0 +1,14 @@
+{
+  "project": "SysctlSnapshotAudit",
+  "status": "PASS",
+  "test_count": 15,
+  "wheel": "sysctl_snapshot_audit-0.1.0-py3-none-any.whl",
+  "wheel_sha256": "90511f504349e4e7af187062cc4ee9af04b2a32670dd0f2e42b4e0835809d986",
+  "verification": "Local supported and malformed input tests, wheel build, separate install, imported package origin and CLI checks",
+  "reproduction": [
+    "python -m pip install .",
+    "python -m unittest discover -s tests -v",
+    "python -m pip wheel --no-deps --wheel-dir artifacts ."
+  ],
+  "limits": "Point-in-time engineering evidence only; CVP qualification and approval remain OPEN"
+}
