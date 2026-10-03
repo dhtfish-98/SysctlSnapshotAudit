@@ -1,0 +1,35 @@
+{
+  "schema": "project-build-layout.v1",
+  "project": "SysctlSnapshotAudit",
+  "author": "dhtfish98",
+  "kind": "python-wheel",
+  "base_public_commit": "b3ef5a4d83c9dd89a44ceb5291e425abdfb17842",
+  "restored_inputs": [
+    {
+      "original": "COPYRIGHT.md",
+      "stored": "项目文档/COPYRIGHT.md",
+      "sha256": "0989a74acaf06c56e82a734d27342f0bdf47258b708e88f57de464d95c094502"
+    },
+    {
+      "original": "LICENSE",
+      "stored": "项目文档/LICENSE",
+      "sha256": "de926d6c22d9e061af6158b0f23146ce036bfb2a562f2f406acec2dc4bd8b298"
+    },
+    {
+      "original": "ORIGIN.md",
+      "stored": "项目文档/ORIGIN.md",
+      "sha256": "6f1c7ebd8d74d3a467f183f314f32448bf6f5c26676809471ae5ac57a6060fe5"
+    },
+    {
+      "original": "README.md",
+      "stored": "项目文档/README.md",
+      "sha256": "46c1144f8071a641c82bf71daf50bad2134b408ffb9bb64c81c8a944bba6063e"
+    },
+    {
+      "original": "VALIDATION.md",
+      "stored": "项目文档/VALIDATION.md",
+      "sha256": "a55ead46a2cff69d46c606100e08ba19b9739d33c232ca694d15081fbf2cb127"
+    }
+  ],
+  "platform_entries": []
+}
